@@ -1,0 +1,52 @@
+
+		--1--
+
+create table records (
+  order_id serial primary key,
+  person_id int,
+  product_name varchar(15),
+  product_price int,
+  quantity int
+  );
+
+		--2--
+
+insert into records (
+	person_id,
+  product_name,
+  product_price,
+  quantity
+  )Values(
+  1,
+  'Steak',
+  15.99,
+  2
+);
+insert into records (
+	person_id,
+  product_name,
+  product_price,
+  quantity
+  )Values(
+  2,
+  'Salad',
+  5.99,
+  1
+);
+
+		--3--
+
+select * from records
+
+		--4--
+
+select sum(quantity) from records
+
+		--5--
+
+select sum(product_price) from records
+
+		--6--
+
+select sum(product_price * quantity) from records
+where person_id = 1;

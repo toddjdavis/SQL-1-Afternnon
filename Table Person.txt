@@ -1,0 +1,140 @@
+
+		--1--
+
+create table person (
+  person_id serial primary key,
+  name varchar(30),
+  age int,
+  height int,
+  city varchar(15),
+  favorite_color varchar(15)
+  )
+
+		--2--
+
+  insert into person (
+    name,
+    age,
+    height,
+    city,
+    favorite_color
+  ) values (
+    'Todd Davis',
+    21,
+    182,
+    'Draper',
+    'Black'
+    );
+    insert into person (
+      name,
+    age,
+    height,
+    city,
+    favorite_color
+  ) values (
+    'Saige Davis',
+    21,
+    160,
+    'Draper',
+    'Teal'
+    );
+    insert into person (
+      name,
+    age,
+    height,
+    city,
+    favorite_color
+  ) values (
+    'Ellie Davis',
+    1,
+    22,
+    'Draper',
+    'Cyan'
+    );
+    insert into person (
+      name,
+    age,
+    height,
+    city,
+    favorite_color
+  ) values (
+    'Bradon Davis',
+    49,
+    176,
+    'Draper',
+    'Gray'
+    );
+    insert into person (
+      name,
+    age,
+    height,
+    city,
+    favorite_color
+  ) values (
+    'Cherie Davis',
+    48,
+    165,
+    'Draper',
+    'Red'
+    );
+
+		--3--
+
+select * from person
+order by height desc;
+ 
+		--4--
+
+select * from person 
+order by height asc;
+
+		--5--
+
+select * from person 
+order by age desc;
+
+		--6--
+
+select * from person 
+where age > 20;
+
+		--7--
+
+select * from person 
+where age = 18;
+
+		--8--
+
+select * from person 
+where age > 20 and age <30;
+
+		--9--
+
+select * from person 
+where age != 27;
+
+		--10--
+
+select * from person 
+where favorite_color != 'Red';
+
+		--11--
+
+select * from person 
+where favorite_color != 'Red' 
+and favorite_color != 'Blue';
+
+		--12--
+
+select * from person 
+where favorite_color in ('Orange', 'Green');
+
+		--13--
+
+select * from person 
+where favorite_color in ('Orange', 'Green', 'Blue');
+
+		--14--
+
+select * from person 
+where favorite_color in ('Yellow', 'Purple');

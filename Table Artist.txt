@@ -1,0 +1,41 @@
+
+		--1--
+
+insert into artist (
+  name
+  ) values (
+    'Todds Band'
+    )
+insert into artist (
+  name
+  ) values (
+    'The Flippers'
+)
+    
+insert into artist (
+  name
+  ) values (
+    'Batman and Robin the Movie the Musical the Band'
+)
+
+		--2--
+
+select * from artist
+order by name desc
+limit 10;
+
+		--3--
+
+select * from artist
+order by name asc
+limit 5;
+
+		--4--
+
+select * from artist
+where name like 'Black%';
+
+		--5--
+
+select * from artist
+where name like 'Black%' or name like '%Black%' or name like '%Black'
